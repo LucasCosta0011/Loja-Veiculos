@@ -1,0 +1,156 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #F2EFEB;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    position: absolute;
+}
+
+.row{
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.input{
+    height: 50px;
+    min-width: 300px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.center{
+    margin: auto;
+}
+
+#button{
+    padding: 10px;
+}
+/*
+.msgOK{
+    margin-top: 20px;
+    position: absolute;
+    color: green;
+    font-size: 1.2em;
+    text-align: center;
+    width: 100%;
+}
+*/
+.msg{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: absolute;
+    color: #F2EFEB;
+    font-size: 1.1em;
+    width: 100%;
+    text-align: center;
+}
+.msgOK, .msgERR{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /*#66CDAA*/
+    background-color:	#66CDAA;
+    margin: auto;
+    width: 618px;
+    min-height: 50px;
+    max-height: 50px;
+    border-radius: 10px;
+}
+.msgERR{
+    background-color:	#CD5C5C;
+}
+#btnVoltar{
+    height: 45px;
+    width: 80px;
+    margin-right: 10px;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 10px;
+    border: solid 1px #000;
+    background-color:#CD5C5C ;
+    color: 	#F2EFEB;
+    cursor: pointer;
+    transition: .5s;
+}
+#btnVoltar:hover{
+    background-color: #F2EFEB;
+    color: 	#CD5C5C;
+}
+#btnCadastrar{
+    height: 45px;
+    width: 100px;
+    margin-right: 10px;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 10px;
+    border: solid 1px #000;
+    color: #F2EFEB;
+    background-color: #2E8B57;
+    cursor: pointer;
+    transition: .5s;
+}
+#btnCadastrar:hover{
+    color: #2E8B57;
+    background-color: #F2EFEB;
+}
+#btnConsultar{
+    height: 45px;
+    width: 100px;
+    margin-right: 10px;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 10px;
+    border: solid 1px #000;
+    color: #F2EFEB;
+    background-color: #035AA6;
+    cursor: pointer;
+    transition: .5s;
+}
+#btnConsultar:hover{
+    color: 	#035AA6;
+    background-color: #F2EFEB;
+}
+input{
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 10px;
+    border: solid 1px #000;
+    background-color: #F2EFEB;
+    color: #000;
+}
+
+.row button{ 
+    margin-bottom: 20px;
+}
+/*ESPAÇAMENTO ENTRE AS COLUNAS*/
+label{
+    font-weight: 600;
+    color: #000;
+    font-size: 1.1em;
+    margin-left: 10px;
+    margin-right: -10px;
+}
+h2{
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+}

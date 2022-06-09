@@ -1,0 +1,19 @@
+label{
+    width: 320px;
+}
+input, button{
+    width: 180px;
+    height: 35px;
+    font-size: 1.1em;
+    color: #594B43;
+    margin: 0 auto; 
+}
+button, #btnFinalizar{
+    margin-right: 10px;
+    margin-top: 15px;
+}
+#btnFinalizar:hover{
+    transition: .5s;
+    color: #F2EFEB;
+    background-color: #594B43;
+}

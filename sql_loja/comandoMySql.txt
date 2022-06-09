@@ -1,0 +1,36 @@
+mysql -h localhost -u root -p
+
+sempre colocar ;
+
+show databases; listar os bancos
+create database name; cria um banco
+use name; usar um banco
+show tables; mostra tabelas
+create table name(); cria uma tabela com nome
+create table nametable(
+	//exemplo de colunas
+	nome varchar(50),
+	email varchar(100),
+	idade int
+);
+describe name; mostra toda a estrutura da coluna
+//valor parâmetro = vp
+insert into name(p1, p2, p3) values(vp1, vp2, vp3); inserindo dados
+select * from nametable; seleciona todos os dados da tabela - lista os dados
+select * from nametable where namecolumn condição valorcondição; buscando dados
+delete from nametable where namecolumn condição valorcondição; deletando dados
+update nametable set name namecolumn = "currentname" where namecolumn = "oldname"; alterando dados
+
+//query de busca // pode ou nao ter md5 na senha
+SELECT * FROM usuario WHERE usuario = 'root' AND senha = md5('');
+
+//cria usuario e senha
+INSERT INTO `usuario` (`usuario`,`senha`) VALUES ('lucas','123');
+
+// DELETANDO BASE DE DADOS
+DROP DATABASE nameDataBase;
+
+//Criando relacionamento 
+
+ALTER TABLE vendas ADD FOREIGN KEY (id_cliente) REFERENCES clientes (id_cliente);
+

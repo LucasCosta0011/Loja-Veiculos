@@ -1,0 +1,91 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+img{
+  display: flex;
+  position: relative;  
+}
+a{
+  display: grid;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.589);
+  background-color: rgba(0, 0, 0, 0.452);
+  opacity: 0.4;
+  border-radius: 25px;
+}
+a:hover, ion-icon:hover {
+  transition: 0.5s;
+  position: relative;
+  opacity: 1;
+}
+body{
+  background-color: #594B43;
+}
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "vendedores cli"
+                       "veiculos vendas";
+                       width: 800px;
+                       height: 800px;
+                       justify-content: center;
+                       margin: auto;
+                       margin-top: 50px;
+                       
+}
+#s1{
+
+  width: 300px;
+  height: 300px;
+  grid-area: vendedores;
+}
+
+#s2{
+
+  width: 300px;
+  height: 300px;
+  grid-area: cli;
+}
+#s3{
+
+  width: 300px;
+  height: 300px;
+  grid-area: veiculos;
+}
+#s4{
+
+  justify-content: end;
+  width: 300px;
+  height: 300px;
+  grid-area: vendas;
+}
+img, ion-icon {
+  width: 300px;
+  height: 300px;
+  border-radius: 25px;
+  border: none;
+  margin: auto;
+  color: #fff;
+}
+h3{
+  margin-bottom: 10px;
+  color: #F2EFEB;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+/*Texto de fundo HOVER*/
+h4{
+
+  display: flex;
+  position: absolute;
+  color: white;
+  margin-left: 140px;
+  margin-top: 200px;
+  font-size: 1.5em;
+  font-family: sans-serif;
+}

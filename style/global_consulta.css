@@ -1,0 +1,100 @@
+/*Alguns elementos estão com a tag BR*/
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+  background-color: #F2EFEB;
+}
+form{
+  display: flex;
+  justify-content: center;
+}
+div{
+  display: flex;
+  width: 100%;
+  justify-content: end;
+}
+caption, button{
+  font-size: 2em;
+  margin-bottom: 50px;
+}
+table{
+  margin: auto;
+  font-size: 1.2em;
+  width: 1000px;
+}
+th, td{
+  padding: 5px;
+  border: solid 1px black;
+}
+form{
+  display:flex;
+  justify-content:center;
+  flex-direction: column;
+}
+input{
+  margin: auto;
+  width: 100px;
+}
+label{
+  font-weight: 600;
+  font-size: 1.1em;
+  margin: auto;
+  width: 100px;
+}
+
+/*DEFINE VALORES TAMANHOS PARA AMBOS BOTÕES*/
+#btnConsultar, #btnVoltar{
+  width: 120px;
+  min-height: 45px;
+  margin-top: 10px;
+  background-color: #035AA6;
+  border: solid 1px #000c;
+  color: #F2EFEB;
+  border-radius: 10px;
+  font-size: 0.9em;
+  font-weight: 600;
+  padding: 5px;
+  transition: .5s;
+}
+#btnConsultar:hover{
+  background-color: #F2EFEB;
+  color: #035AA6;
+  cursor: pointer;
+}
+#btnVoltar{
+  margin-right: 5px;
+  background-color: 	#CD5C5C;
+}
+#btnVoltar:hover{
+  background-color: #F2EFEB;
+  color: 	#CD5C5C;
+  cursor: pointer;
+}
+/*ESTILOS PARA OS INPUTS*/
+#inputDate, .inputs{
+  height: 40px;
+  border-radius: 10px;
+  font-size: 1.1em;
+  padding: 3px;
+  border: solid 1px #000;
+  width: 130px;
+}
+
+.btn{
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  margin-bottom: 20px;
+}
+h2{
+  margin-top: 50px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.margin-top-consultas{
+  margin-top: 20px;
+}

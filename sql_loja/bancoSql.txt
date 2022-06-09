@@ -1,0 +1,62 @@
+// deleta um banco
+drop nomeDoBanco;
+
+// cria um banco
+create database loja_veiculos
+default character set utf8
+default collate utf8_general_ci;
+
+// seleciona o banco
+use loja_veiculos;
+
+// cria uma tabela
+CREATE TABLE vendedores(
+	id_vendedor smallint auto_increment not null primary key,
+    nome_vendedor varchar(30) not null,
+    endereco_vendedor varchar(80) not null,
+    tel_vendedor int(11) not null,
+    rg_vendedor varchar(9) not null,
+    cpf_vendedor varchar(11) not null,
+    nasc_vendedor date
+)DEFAULT CHARSET = utf8;
+
+CREATE TABLE clientes (
+	id_cliente smallint auto_increment not null primary key,
+    nome_cliente varchar(30) not null,
+    endereco_cliente varchar(80) not null,
+    telefone_cliente int(11) not null,
+    rg_cliente varchar(9) not null,
+    cpf_cliente int(11) not null,
+    nasc_cliente date
+) DEFAULT CHARSET = utf8;
+
+CREATE TABLE veiculos (
+	id_veiculos smallint auto_increment not null primary key,
+    fabricante varchar(30) not null,
+    modelo varchar(30) not null,
+    ano_fab_veiculo year,
+    ano_mod_veiculo year,
+    cor_veiculo varchar(25) not null,
+    placa_veiculo varchar(7) not null,
+    cidade_veiculo varchar(30) not null,
+    renavam_veiculo varchar(11) not null,
+    valor_veiculo decimal(8) not null,
+    opcionais_veiculo varchar(30) not null
+) DEFAULT CHARSET = utf8;
+
+
+CREATE TABLE vendas (
+	id_vendas smallint auto_increment not null primary key,
+    id_vendedor smallint,
+    id_cliente smallint,
+    id_veiculo smallint,
+    data_compra date,
+    foreign key (id_vendedor) references vendedores(id_vendedor),
+    foreign key (id_cliente) references clientes(id_cliente),
+    foreign key (id_veiculo) references veiculos(id_veiculo)    
+) DEFAULT CHARSET = utf8;
+
+
+// renomeando colunas
+ALTER TABLE veiculos
+CHANGE id_veiculos id_veiculo smallint;

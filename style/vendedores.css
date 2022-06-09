@@ -1,0 +1,51 @@
+label{
+    width: 320px;
+}
+
+.id{
+    max-width: 50px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+#idLabel{   
+    margin-left: 79px;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+button{
+    margin-right: 10px;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 10px;
+    border: solid 1px black;
+    color: #594B43;
+    background-color: #F2EFEB;
+    cursor: pointer;
+    transition: .5s;
+}
+button:hover{
+    color: #F2EFEB;
+    background-color: #594B43;
+}
+input{
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 10px;
+    border: solid 1px black;
+    background-color: #F2EFEB;
+    color: #594B43;
+}
+
+.row button{ 
+    margin-bottom: 20px;
+}
+body{
+    background-color: #F2EFEB;
+}
+label{
+    color: #594B43;
+    font-size: 1.1em;
+}
