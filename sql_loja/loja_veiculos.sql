@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 04-Maio-2022 às 03:45
--- Versão do servidor: 10.4.21-MariaDB
--- versão do PHP: 8.0.12
+-- Tempo de geração: 27-Jul-2022 às 22:19
+-- Versão do servidor: 10.4.22-MariaDB
+-- versão do PHP: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -42,11 +42,9 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`id_cliente`, `nome_cliente`, `endereco_cliente`, `telefone_cliente`, `rg_cliente`, `cpf_cliente`, `nasc_cliente`) VALUES
-(4, 'Lucas', 'rua', 121212, '2', 12121212, '0000-00-00'),
-(5, 'Roger guedes', 'rua ', 121212, '21212x', 212112222, '0000-00-00'),
-(6, 'Joao Felipe', 'Rua dos andradas', 121212222, '21414x', 2147483647, '2022-05-20'),
-(7, 'José Arcanjo', '15 de novembro', 121212, '566212x', 212121121, '2004-06-15'),
-(8, 'Nina Isadora', 'Rua Cem', 0, '16.522.58', 2147483647, '2021-05-08');
+(10, 'Nome Tereza Tereza Nogueira', 'Rua Água Marinha', 27, '328200578', 2147483647, '1968-03-21'),
+(11, 'Brenda Sônia da Rocha', 'Rua Amapá', 67, '335112092', 2147483647, '1974-07-16'),
+(12, 'Murilo Benjamin Rezende', 'Rua Nova Aliança', 96, '343843493', 2147483647, '1977-05-12');
 
 -- --------------------------------------------------------
 
@@ -73,17 +71,10 @@ CREATE TABLE `veiculos` (
 --
 
 INSERT INTO `veiculos` (`id_veiculo`, `fabricante`, `modelo`, `ano_fab_veiculo`, `ano_mod_veiculo`, `cor_veiculo`, `placa_veiculo`, `cidade_veiculo`, `renavam_veiculo`, `valor_veiculo`, `opcionais_veiculo`) VALUES
-(4, 'fiat', 'uno', 2122, 2121, 'azul', 'asja23', 'asahsua', '2121', '212.00', 'ffdsfd'),
-(5, 'fiat', 'uno', 2122, 2121, 'azul', 'asja23', 'asahsua', '2121', '21212.00', 'faasd'),
-(6, 'fiat', 'uno', 2122, 2121, 'azul', 'asja23', 'asahsua', '2121', '21212.00', 'faasd'),
-(7, 'fiat', 'uno', 2122, 2121, '', 'asja23', 'asahsua', '2121', '21212.00', 'faasd'),
-(8, 'fiat', 'uno', 2000, 2000, 'dsdsd', 'asja23', 'asahsua', '21212', '2121.00', 'fsf'),
-(9, 'fiat', 'uno', 2000, 2000, 'dsdsd', 'asja23', '', '21212', '2121.00', 'fsf'),
-(10, 'fiat', 'uno', 2000, 2000, 'dsdsd', 'asja23', '', '21212', '2121.00', 'fsf'),
-(11, 'fiat', 'uno', 2000, 2000, 'dsdsd', 'asja23', '', '21212', '2121.00', 'fsf'),
-(12, 'fiat', 'uno', 2000, 2000, 'dsdsd', 'asja23', 'dsds', '21212', '2121.00', 'fsf'),
-(13, 'Volks', 'Gol', 2000, 2005, 'Verde', '12212c', 'Porto Feirreira', '123456789', '999999.99', 'dswd'),
-(14, 'Volks', 'Gol quadrado', 1999, 2000, 'Verde', '12212c', 'Leme', '90828765', '999999.99', 'sdsds');
+(16, 'PORSCHE', 'MACAN', 2018, 2018, 'AZUL', 'DWF23', 'Ribeirão Preto, SP', '723567185', '335000.00', 'Utilitário esportivo'),
+(17, 'HYUNDAI', 'SANTA FÉ', 2014, 2015, 'PRATA', 'SCVG3', 'Curitiba, PR', '27362376', '96900.00', 'Airbag, freio ABS'),
+(18, 'BMW', 'M 135i', 2015, 2015, 'PRETA', 'CJAJD3', 'São Paulo, SP', '7836713571', '184980.00', 'Teto solar, Travas elétricas'),
+(19, 'LAND ROVER', 'DISCOVERY SPORT', 2017, 2017, 'PRATA', 'JKB32', 'Curitiba, PR', '9372836278', '209900.00', 'Sensor de chuva,  Alarme');
 
 -- --------------------------------------------------------
 
@@ -98,6 +89,15 @@ CREATE TABLE `vendas` (
   `id_veiculo` smallint(6) DEFAULT NULL,
   `data_compra` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `vendas`
+--
+
+INSERT INTO `vendas` (`id_vendas`, `id_vendedor`, `id_cliente`, `id_veiculo`, `data_compra`) VALUES
+(1, 36, 12, 19, '2022-06-14'),
+(2, 38, 11, 17, '2022-06-23'),
+(3, 37, 10, 18, '2022-06-06');
 
 -- --------------------------------------------------------
 
@@ -120,11 +120,10 @@ CREATE TABLE `vendedores` (
 --
 
 INSERT INTO `vendedores` (`id_vendedor`, `nome_vendedor`, `endereco_vendedor`, `tel_vendedor`, `rg_vendedor`, `cpf_vendedor`, `nasc_vendedor`) VALUES
-(29, 'Lucas', 'rua teste', 21261212, '212121', '212121', '2022-05-20'),
-(30, 'Lucas', 'rua teste', 1212121, '212121', '212121212', '2022-05-07'),
-(31, 'Cleber almeida', 'rua duck de caxias', 2147483647, '212121', '1212121', '1996-03-03'),
-(32, 'Manuel Carlos da Rocha', 'Rua Seis', 0, '397259098', '19180918972', '1988-02-06'),
-(33, 'Laura Isabela', 'Rua Teixeira Guerra', 952968, '100988635', '06936660720', '1999-03-12');
+(35, 'Nair Eduarda Fernandes', 'Rua 21', 85, '400182518', '43716781061', '1954-04-26'),
+(36, 'Emanuelly Lara Márcia Nogueira', 'Rua Praia de Ipanema', 11, '438551722', '52957012472', '1963-04-10'),
+(37, 'Anderson Renato Moreira', 'Avenida Urupá', 69, '396167573', '81575400898', '1952-06-21'),
+(38, 'Daniel Thales Matheus Teixeira', 'Rua Antonio José de Melo', 82, '143453051', '20484488015', '1988-07-22');
 
 --
 -- Índices para tabelas despejadas
@@ -165,25 +164,25 @@ ALTER TABLE `vendedores`
 -- AUTO_INCREMENT de tabela `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id_cliente` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_cliente` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de tabela `veiculos`
 --
 ALTER TABLE `veiculos`
-  MODIFY `id_veiculo` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_veiculo` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de tabela `vendas`
 --
 ALTER TABLE `vendas`
-  MODIFY `id_vendas` smallint(6) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_vendas` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `vendedores`
 --
 ALTER TABLE `vendedores`
-  MODIFY `id_vendedor` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id_vendedor` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- Restrições para despejos de tabelas
