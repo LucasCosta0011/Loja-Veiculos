@@ -1,5 +1,4 @@
 # Projeto loja de veículos
-##
 
 # Informações do sistema
  Código procedural.
