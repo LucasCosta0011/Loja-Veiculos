@@ -1,6 +1,6 @@
 <?php
 
-  require('../conexao.php');
+  require('../db/conexao.php');
   $query = "SELECT * FROM veiculos";
   $result = mysqli_query($conex, $query);
 
@@ -17,13 +17,13 @@
 </head>
 <body>
 
-  <form action="../buscas/busca_veiculos.php" method="post">
+  <form action="../busca-filtrada/busca_veiculos.php" method="post">
     <h3 style="margin: auto;">Escolha um veiculo dentro do seu orçamento:</h3><br>
       <span style="margin: auto;">De:<input id="inputValoresVeiculos" class="inputs" type="text" name="menor-valor"> R$</span><br>
       <span style="margin: auto;">ATÉ:<input class="inputs" type="text" name="maior-valor"> R$</span><br>
 
         <div class="btn">
-        <a href="../../veiculos.php">
+        <a href="../../formularios/veiculos.php">
           <button id="btnVoltar" type="button">Voltar</button>
         </a>
           <button id="btnConsultar" type="submit">Consultar</button>

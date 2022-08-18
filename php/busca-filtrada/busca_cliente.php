@@ -1,5 +1,5 @@
 <?php
-require('../conexao.php');
+require('../db/conexao.php');
 $ano = $_POST['ano'];
 // Colocar aspas simples nas variaveis
 $query = "SELECT * FROM clientes WHERE nasc_cliente <= '$ano'";
@@ -20,7 +20,7 @@ $result = mysqli_query($conex, $query);
 <body>
 <h2>Clientes encontrados:</h2>
     <div class="btn">
-        <a href="../consultas/consultas_clientes.php">
+        <a href="../busca-sem-filtro/consultas_clientes.php">
         <button id="btnVoltar" type="button">Voltar</button>
         </a>
     </div>

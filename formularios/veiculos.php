@@ -20,15 +20,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar veiculos</title>
-    <link rel="stylesheet" href="./style/global.css">
-    <link rel="stylesheet" href="./style/veiculos.css">
+    <link rel="stylesheet" href="../style/global.css">
+    <link rel="stylesheet" href="../style/veiculos.css">
 </head>
 <body>
     
     <h2>Cadastrar veículos</h2>
     <div class="<?=$msgAlert?>"><?=$msg?></div>
     
-    <form action="./php/veiculos.php" method="post">
+    <form action="../php/processa-formularios/veiculos.php" method="post">
         <div class="column">
             <div class="row center">
                 <label for="fabricante">Fabricante: <input type="text" class="input" name="fabricante"></label>
@@ -55,12 +55,12 @@
             <div class="row">
                 <div class="row center">
                     <button id="btnCadastrar" type="submit">Cadastrar</button>
-                    <a href="./index.html">
+                    <a href="../index.html">
                         <button id="btnVoltar" type="button">Voltar</button>
                     </a>
                 </div>
                 <div class="row center">
-                    <a href="php/consultas/consultas_veiculos.php">
+                    <a href="../php/busca-sem-filtro/consultas_veiculos.php">
                         <button id="btnConsultar" type="button">Consultar</button>
                     </a>
                 </div>

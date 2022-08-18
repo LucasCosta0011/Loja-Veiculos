@@ -19,8 +19,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/global.css">
-    <link rel="stylesheet" href="style/vendas.css">
+    <link rel="stylesheet" href="../style/global.css">
+    <link rel="stylesheet" href="../style/vendas.css">
     <title>Finalizar venda</title>
 </head>
 <body>
@@ -28,7 +28,7 @@
     <h2>Finalizar venda</h2>
     <div class="<?=$msgAlert?>"><?=$msg?></div>
     
-    <form action="./php/vendas.php" method="post">
+    <form action="../php/processa-formularios/vendas.php" method="post">
         <div class="column">
             <div class="row center">
                 <label for="">Id Vendedor
@@ -47,10 +47,10 @@
     
             <div class="row center">
                 <button id="btnCadastrar" type="submit">Finalizar</button>
-                <a href="./index.html">
+                <a href="../index.html">
                     <button id="btnVoltar" type="button">Voltar</button>
                 </a>
-                <a href="./php/consultas/consultas_vendas.php">
+                <a href="../php/busca-sem-filtro/consultas_vendas.php">
                     <button id="btnConsultar" type="button">Consultar</button>
                 </a>
             </div>

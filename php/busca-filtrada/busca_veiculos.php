@@ -1,5 +1,5 @@
 <?php
-require('../conexao.php');
+require('../db/conexao.php');
 $menorValor = $_POST['menor-valor'];
 $maiorValor = $_POST['maior-valor'];
 
@@ -22,7 +22,7 @@ $result = mysqli_query($conex, $query);
 <body>
     <h2>Veiculos encontrados:</h2>
     <div class="btn">
-        <a href="../consultas/consultas_veiculos.php">
+        <a href="../busca-sem-filtro/consultas_veiculos.php">
         <button id="btnVoltar" type="button">Voltar</button>
         </a>
     </div>

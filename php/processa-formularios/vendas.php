@@ -1,6 +1,6 @@
 
 <?php
-    require __DIR__.'./conexao.php';
+    require ('../db/conexao.php');
     session_start();
     function CadastraVendedores($conex, $idVendedor, $idCliente, $idVeiculo, $dataVenda){ // Início da função CadastraVendedores
         $query="insert into loja_veiculos.vendas (id_vendedor, id_cliente, id_veiculo, data_compra) values (
@@ -19,12 +19,12 @@
 
     if ($idVendedor == '' || $idCliente == '' || $idVeiculo == '' || $dataVenda == ''){
         $_SESSION['erroCadastro'] = $idVendedor;
-        header('location: ../vendas.php');
+        header('location: ../../formularios/vendas.php');
     }else{
         if(isset($idVendedor, $idCliente, $idVeiculo, $dataVenda)){
             if(CadastraVendedores($conex, $idVendedor, $idCliente, $idVeiculo, $dataVenda)){
                 $_SESSION['Cadastrado'] = $idVendedor;
-                header('location: ../vendas.php');
+                header('location: ../../formularios/vendas.php');
             }
         }
     } 

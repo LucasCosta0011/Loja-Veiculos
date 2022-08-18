@@ -19,13 +19,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar clientes</title>
-    <link rel="stylesheet" href="style/global.css">
-    <link rel="stylesheet" href="style/clientes.css">
+    <link rel="stylesheet" href="../style/global.css">
+    <link rel="stylesheet" href="../style/clientes.css">
 </head>
 <body>
     <h2>Cadastrar clientes</h2>
     <div class="<?=$msgAlert?>"><?=$msg?></div>
-    <form action="./php/clientes.php" method="post">
+    <form action="../php/processa-formularios/clientes.php" method="post">
         <div class="column">
             <div class="row center">
                 <label for="nomeCliente">Nome: <input type="text" class="input" name="nomeCliente"></label>
@@ -43,10 +43,10 @@
      
                 <div class="msg">
                     <button id="btnCadastrar" type="submit">Cadastrar</button>
-                    <a href="./index.html">
+                    <a href="../index.html">
                         <button id="btnVoltar" type="button">Voltar</button>
                     </a>
-                    <a href="php/consultas/consultas_clientes.php">
+                    <a href="../php/busca-sem-filtro/consultas_clientes.php">
                         <button id="btnConsultar" type="button">Consultar</button>
                     </a>
                 </div>

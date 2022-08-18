@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__.'./conexao.php';
+require ('../db/conexao.php');
 session_start();
 
 function CadastraVeiculos(
@@ -52,7 +52,7 @@ $cidade_veiculo == '' ||
 $renavam_veiculo == '' ||
 $valor_veiculo == ''){
     $_SESSION['erroCadastro'] = $modelo;
-    header('location: ../veiculos.php');
+    header('location: ../../formularios/veiculos.php');
 }else{
     if(isset($fabricante, 
     $modelo, 
@@ -76,7 +76,7 @@ $valor_veiculo == ''){
         $valor_veiculo,
         $opcional)){
             $_SESSION['Cadastrado'] = $modelo;
-            header('location: ../veiculos.php');
+            header('location: ../../formularios/veiculos.php');
         }
     }
 } 

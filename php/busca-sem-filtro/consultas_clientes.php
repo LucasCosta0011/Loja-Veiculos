@@ -1,6 +1,6 @@
 <?php
 
-    require('../conexao.php');
+    require('../db/conexao.php');
     $query = "SELECT * FROM clientes";
     $result = mysqli_query($conex, $query);
 
@@ -39,13 +39,13 @@ mysqli_free_result($result);
     <link rel="stylesheet" href="../../style/global_consulta.css">
 </head>
 <body>
-    <form action="../buscas/busca_cliente.php" method="post">
+    <form action="../busca-filtrada/busca_cliente.php" method="post">
         <label for="">Clientes baixo de:
         <input id="inputDate" type="date" name="ano">
         </label>
 
         <div class="btn">
-            <a href="../../clientes.php">
+            <a href="../../formularios/clientes.php">
                 <button id="btnVoltar" type="button">Voltar</button>
             </a>
             <button id="btnConsultar" type="submit">Consultar</button>

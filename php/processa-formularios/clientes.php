@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__.'./conexao.php';
+require ('../db/conexao.php');
 session_start();
 function CadastraClientes($conex, $nome, $endereco, $telefone, $rg, $cpf, $nascimento){ // Início da função CadastraClientes
     $query="insert into clientes (nome_cliente, endereco_cliente, telefone_cliente, rg_cliente, cpf_cliente, nasc_cliente) values (
@@ -22,12 +22,12 @@ $dataNasc = $_POST['nascCliente'];
 
 if ($nome == '' || $endereco == '' || $tel == '' || $rg == '' || $cpf == '' || $dataNasc == ''){
     $_SESSION['erroCadastro'] = $nome;
-    header('location: ../clientes.php');
+    header('location: ../../formularios/clientes.php');
 }else{
     if(isset($nome, $endereco, $tel, $rg, $cpf, $dataNasc)){
         if(CadastraClientes($conex, $nome, $endereco, $tel, $rg, $cpf, $dataNasc)){
             $_SESSION['Cadastrado'] = $nome;
-            header('location: ../clientes.php');
+            header('location: ../../formularios/clientes.php');
         }
     }
 } 

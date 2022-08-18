@@ -1,5 +1,5 @@
 <?php 
-  require('../conexao.php');
+  require('../db/conexao.php');
   $ano = $_POST['ano'];
   $query = "SELECT * FROM vendedores WHERE nasc_vendedor>='$ano'";
   $result = mysqli_query($conex, $query);
@@ -17,7 +17,7 @@
 <body>
   <h2>Vendedores encontrados:</h2>
   <div class="btn">
-    <a href="../consultas/consultas_vendedores.php">
+    <a href="../busca-sem-filtro/consultas_vendedores.php">
       <button id="btnVoltar" type="button">Voltar</button>
     </a>
   </div>

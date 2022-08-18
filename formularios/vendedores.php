@@ -19,8 +19,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar vendedores</title>
-    <link rel="stylesheet" href="style/global.css">
-    <link rel="stylesheet" href="style/vendedores.css">
+    <link rel="stylesheet" href="../style/global.css">
+    <link rel="stylesheet" href="../style/vendedores.css">
 
 </head>
 <body>
@@ -28,7 +28,7 @@
     <h2>Cadastrar vendedores</h2>
     <div class="<?=$msgAlert?>"><?=$msg?></div>
 
-    <form action="./php/vendedores.php" method="post">
+    <form action="../php/processa-formularios/vendedores.php" method="post">
     <div class="column">
 
             <div class="row center">
@@ -65,11 +65,11 @@
 
                     <button id="btnCadastrar" id="button" type="submit">Cadastrar</button>
  
-                    <a class="text-center" href="./index.html">
+                    <a class="text-center" href="../index.html">
                         <button id="btnVoltar" type="button">Voltar</button>
                     </a>
  
-                    <a href="php/consultas/consultas_vendedores.php">
+                    <a href="../php/busca-sem-filtro/consultas_vendedores.php">
                         <button id="btnConsultar" id="btnConsultar" type="button">Consultar</button>
                     </a>
             </div>   

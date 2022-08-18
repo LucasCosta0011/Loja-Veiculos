@@ -1,5 +1,7 @@
 <?php 
-  require('../conexao.php');
+  require('../db/conexao.php');
+  $anoInicio = $_POST['anoInicio'];
+  $anoFinal = $_POST['anoFinal'];
   $query = "SELECT vendedores.nome_vendedor, clientes.nome_cliente, veiculos.modelo, veiculos.valor_veiculo, vendas.data_compra
   from vendas
   INNER JOIN vendedores
@@ -7,8 +9,8 @@
   INNER JOIN clientes
   ON vendas.id_cliente = clientes.id_cliente
   INNER JOIN veiculos
-  ON vendas.id_veiculo = veiculos.id_veiculo";
-  $result = mysqli_query($conex, $query);
+  ON vendas.id_veiculo = veiculos.id_veiculo
+  WHERE vendas.data_compra >= '$anoInicio' AND vendas.data_compra <= '$anoFinal'";
 ?>
 
 <!DOCTYPE html>
@@ -17,34 +19,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vendas encontradas:</title>
+  <title>Buscas de Vendas</title>
   <link rel="stylesheet" href="../../style/global_consulta.css">
 </head>
 <body>
-  <form action="../buscas/busca_vendas.php" method="post">
-    
-    <label class="margin-top-consultas" for="">Vendas de:
-      <input id="inputDate" type="date" name="anoInicio">
-      
-    </label>
-    <label for="">até:
-        <input id="inputDate" type="date" name="anoFinal">
-    </label>
-    <div class="btn">
-      <a href="../../vendas.php">
-        <button id="btnVoltar" type="button">Voltar</button>
-      </a>
-      <button id="btnConsultar" type="submit">Consultar</button>
-    </div>
-  </form>
   <h2>Vendas encontradas:</h2>
+  <div class="btn">
+    <a href="../busca-sem-filtro/consultas_vendas.php">
+      <button id="btnVoltar" type="button">Voltar</button>
+    </a>
+  </div>
   <table>
     <thead>
         <tr>
             <th>Nome Vendedor</th>
             <th>Nome Cliente</th>
             <th>Modelo</th>
-            <th>Valor</th> 
             <th>Data</th> 
         </tr>
     </thead>
@@ -54,7 +44,6 @@
         <td><?=$dados['nome_vendedor'];?></td>
         <td><?=$dados['nome_cliente'];?></td>
         <td><?=$dados['modelo'];?></td>
-        <td><?=$dados['valor_veiculo'];?></td>
         <td><?=$dados['data_compra'];?></td>
     </tr>
     <?php endwhile;?>

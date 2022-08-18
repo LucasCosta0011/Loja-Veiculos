@@ -1,5 +1,5 @@
 <?php 
-  require('../conexao.php');
+  require('../db/conexao.php');
   $query = "SELECT * FROM vendedores";
   $result = mysqli_query($conex, $query);
 ?>
@@ -15,13 +15,13 @@
 </head>
 <body>
 
-      <form action="../buscas/busca_vendedores.php" method="post">
+      <form action="../busca-filtrada/busca_vendedores.php" method="post">
 
         <label for="">Vendedores acima de:</label>
         <input id="inputDate" type="date" name="ano">
 
         <div class="btn">
-          <a href="../../vendedores.php">
+          <a href="../../formularios/vendedores.php">
               <button id="btnVoltar" type="button">Voltar</button>
           </a>
           <button type="submit" id="btnConsultar">Consultar</button>
